@@ -1,0 +1,90 @@
+body{
+    background-color: black;
+}
+.feke__form{
+    display:flex;
+    flex-direction: column;
+   justify-self: center;
+    margin-top: 4rem;
+    width: 30rem;
+    background-color: rgb(231, 243, 239);
+    padding: 1.5rem;
+    border-radius: 3rem;
+   
+    & .feke__p{
+        color: rgb(14, 121, 4);
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 0.5rem;
+    }
+    & .feke__span{
+        color: red;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    & .feke__label{
+        display: flex;
+        flex-direction: column;
+        color: green;
+        font-weight: 700;
+        font-size: 1.8rem;
+       margin-top: 1rem;
+    }
+    & .feke__input{
+        display: flex;
+        background-color: #b1ccc0d2;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 1rem;
+        padding-left: 2rem;
+        
+    }
+    & .imagem__logo{
+        display: flex;
+        flex-direction: column;
+        width: 6rem;
+        justify-self: center;
+        border-radius: 50%;
+        border: solid red;
+    }
+    & .feke__botao{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        font-weight: 700;
+        border-radius: 3rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        padding: 0.5rem;
+        background-color: red;
+        border: none;
+        justify-self: center;
+        width: 100%;
+      &:hover{
+        background-color: green;
+        color: red;
+      }
+    
+    }
+    & .feke__criarconta{
+        display: flex;
+        flex-direction: column;
+       text-align: center;
+       margin-top: 1rem;
+       font-size: 2rem;
+       color: rgba(70, 70, 8, 0.856);
+       font-weight: 800;
+       text-decoration: none;
+       &:hover{
+        color: green;
+        
+       }
+    }
+}

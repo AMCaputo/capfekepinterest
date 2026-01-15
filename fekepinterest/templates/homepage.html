@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            {% block title %}
+            FekePinterest - Caputo & Filhos Lda.
+            {% endblock title %}
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css')}}">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='CSS/perfil.css')}}">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='CSS/feed.css')}}">
+        <meta name="description" content="#">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% block head %}
+        
+        {% endblock head %}
+    
+        {% block body %}
+        {% block formulario %}
+        <form method="post" enctype="multipart/form-data" class="feke__form">
+            <div>
+               
+                    <img class="imagem__logo" src="{{ url_for('static', filename='fotos_site/cap.jpg')}}" alt="Logo da Empresa">
+                
+                
+                    <p class="feke__p">Bem-vindo (a) ao </p>
+                    <p class="feke__span">FakePinterest</p>
+                    {{ form_login.csrf_token }}
+            
+                <div class="feke__label">
+                    {{ form_login.email.label() }}
+                {% if form_login.email.errors %}
+                    {% for erro in form_login.email.errors %}
+                        <p style="color: red;">{{ erro }}</p>
+                    {% endfor %}
+                {% endif %}
+                    {{ form_login.email(class="feke__input") }}
+                </div>
+            
+                <div class="feke__label">
+                    {{ form_login.senha.label() }}
+                    {% if form_login.senha.errors %}
+                        {% for erro in form_login.senha.errors %}
+                            <p style="color: red;">{{ erro }}</p>
+                        {% endfor %}
+                    {% endif %}
+                        {{ form_login.senha(class="feke__input") }}
+                </div>
+
+                    {{ form_login.botao_confirmacao(class="feke__botao") }}
+            
+                    <a class="feke__criarconta" href="{{ url_for('criar_conta')}}">Não tem uma conta? Cria aqui</a>
+                </div>
+            </form>
+            {% endblock formulario %}
+            
+        </body>
+        {% endblock %}
+</html>

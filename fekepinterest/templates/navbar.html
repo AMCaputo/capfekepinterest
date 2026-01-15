@@ -1,0 +1,16 @@
+{% block style %} 
+    <link rel="stylesheet"  href="{{ url_for('static', filename='CSS/navbar.css')}}">
+{% endblock %}
+
+<header>
+    <nav class="navbar__geral cabecalho">
+        <a href="{{ url_for('feed') }}"><img src="{{ url_for('static', filename='fotos_site/cap.jpg')}}" class="img__nav" alt=""></a>
+       
+            <a class="navbar__item" href="{{ url_for('feed') }}">Feed</a>
+            <a class="navbar__item" href="{{ url_for('perfil', id_usuario=current_user.id) }}">Perfil</a>
+           
+            <a class="circulo"  href="{{ url_for('logout') }}">Logout</a>
+               
+       
+    </nav>
+</header>

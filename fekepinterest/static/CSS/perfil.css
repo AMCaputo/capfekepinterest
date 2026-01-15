@@ -1,0 +1,104 @@
+
+.form__perfil{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin-top: 15rem;
+   cursor: pointer;
+   & .perfil-h1{
+    color: red;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    & span{
+        color: white;
+        cursor: pointer;
+    }
+   }
+   
+}
+.conteudo__perfil{ 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        justify-items: center;
+        padding: 3rem 2rem;
+        margin-top: 6rem;
+        & .imagem__gred{
+            cursor: pointer;
+            width: 20rem;
+            margin-top: 1.5rem;
+            border-radius: 1rem;
+            border: solid rgba(245, 241, 235, 0.747);
+        }
+
+    }
+
+    & .perfil__h2{
+        cursor: pointer;
+        display: flex;
+        margin-top: 7rem;
+        justify-self: center;
+        font-size: 3rem;
+        color: red;
+        gap: 0.8rem;
+    }
+    & .ver{
+       
+        color: white;
+    }
+
+
+.input-arquivo{
+    background-color: red;
+    text-transform: capitalize;
+   font-size: 2rem;
+   border-radius: 1rem;
+   margin-top: 0.5rem;
+   cursor: pointer;
+}
+
+.arquivo{
+    text-transform: capitalize;
+    font-family: 5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.botao__login{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 3rem;
+    cursor: pointer;
+    margin-top: 2.5rem;
+    padding: 0.9rem;
+    background-color: red;
+    border: none;
+    justify-self: center;
+    width: 10rem;
+  &:hover{
+    background-color: green;
+    color: red;
+  }
+}
+
+.contiudo__perfil{
+    display: flex;
+    cursor: pointer;
+}
+
+@media(max-width: 431em){
+    .perfil__h2{
+        display: flex;
+        flex-direction: column;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+@media(max-width: 420em){
+    .input-arquivo{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,15 @@
+.feed__geral{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding: 3rem 2rem;
+    margin-top: 15rem;
+    justify-items: center;
+    & .feed__imagem{
+    
+        width: 20rem;
+        margin-top: 1.5rem;
+        border-radius: 1rem;
+        border: solid rgba(245, 241, 235, 0.747);
+    
+    }
+}
