@@ -33,6 +33,11 @@
             border: solid rgba(245, 241, 235, 0.747);
         }
 
+        & .imagem__gred:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transition: calc(0.8s);
+        }
     }
 
     & .perfil__h2{

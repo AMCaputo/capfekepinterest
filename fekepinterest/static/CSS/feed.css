@@ -10,6 +10,9 @@
         margin-top: 1.5rem;
         border-radius: 1rem;
         border: solid rgba(245, 241, 235, 0.747);
-    
+    }
+    & .feed__imagem:hover{
+        transform: scale(1.2);
+        transition: calc(0.8s);
     }
 }
