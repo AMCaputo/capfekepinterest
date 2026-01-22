@@ -18,3 +18,11 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 
 db = SQLAlchemy(app)
+
+with app.app_context():
+    db.create_all()  # Isso cria as tabelas automaticamente se elas não existirem
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
